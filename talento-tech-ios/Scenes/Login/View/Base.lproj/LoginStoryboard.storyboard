@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoSans-100.otf">
+            <string>MuseoSans-100</string>
+        </array>
+        <array key="MuseoSans-300.otf">
+            <string>MuseoSans-300</string>
+        </array>
+        <array key="MuseoSans-500.otf">
+            <string>MuseoSans-500</string>
+        </array>
+        <array key="MuseoSans-700.otf">
+            <string>MuseoSans-700</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dNr-s4-PFp">
+            <objects>
+                <navigationController id="z7t-qY-BMh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q4m-3J-J8d">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kG4-DA-2Qp" kind="relationship" relationship="rootViewController" id="VtC-LL-7Km"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lop-5I-fYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1088" y="10"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="FOs-r6-PZ4">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="kG4-DA-2Qp" customClass="LoginViewController" customModule="talento_tech_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0fx-SA-I9i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Talento tech" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGF-Od-ouc">
+                                <rect key="frame" x="16" y="94" width="288" height="24"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QnX-o2-LYH" customClass="CustomButton" customModule="talento_tech_ios" customModuleProvider="target">
+                                <rect key="frame" x="64" y="178" width="192" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                <state key="normal" title="Inicia con Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginTapped:" destination="kG4-DA-2Qp" eventType="touchUpInside" id="3re-U8-nco"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk2-FG-3ba" customClass="CustomButton" customModule="talento_tech_ios" customModuleProvider="target">
+                                <rect key="frame" x="64" y="236" width="192" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                <state key="normal" title="Inicio con celular">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPhoneNumberTapped:" destination="kG4-DA-2Qp" eventType="touchUpInside" id="FXa-F8-n2l"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8E-hE-eoH">
+                                <rect key="frame" x="0.0" y="208" width="320" height="140"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número celular" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xwH-tK-oYI">
+                                        <rect key="frame" x="64.5" y="40" width="191" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="191" id="QIm-Qa-08Q"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="kG4-DA-2Qp" id="Quh-jR-MpN"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSy-dY-3SX" customClass="CustomButton" customModule="talento_tech_ios" customModuleProvider="target">
+                                        <rect key="frame" x="64.5" y="100" width="191" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.53725490200000003" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="191" id="cMh-by-1Hj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                        <state key="normal" title="Iniciar Sesión">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="loginPhoneNumberTypeTapped:" destination="kG4-DA-2Qp" eventType="touchUpInside" id="Jg1-mR-DKG"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-phone" translatesAutoresizingMaskIntoConstraints="NO" id="pea-yi-FT2">
+                                        <rect key="frame" x="69.5" y="45" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="ZfR-2b-BUH"/>
+                                            <constraint firstAttribute="width" constant="20" id="ucM-pz-nNt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="o" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO6-Gx-oRa">
+                                        <rect key="frame" x="149.5" y="6" width="21" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="21" id="6QK-A2-zkk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MuseoSans-300" family="Museo Sans" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUO-eR-fhD">
+                                        <rect key="frame" x="0.0" y="16" width="149" height="1"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huW-Io-enF">
+                                        <rect key="frame" x="171" y="16" width="149" height="1"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="huW-Io-enF" firstAttribute="leading" secondItem="M8E-hE-eoH" secondAttribute="leading" constant="171" id="1dW-kS-KHQ"/>
+                                    <constraint firstAttribute="height" constant="140" id="AYC-Mu-ad7"/>
+                                    <constraint firstItem="huW-Io-enF" firstAttribute="centerY" secondItem="BO6-Gx-oRa" secondAttribute="centerY" id="C6d-hK-VNZ"/>
+                                    <constraint firstItem="EUO-eR-fhD" firstAttribute="top" secondItem="huW-Io-enF" secondAttribute="top" id="MoI-FO-6wq"/>
+                                    <constraint firstItem="BO6-Gx-oRa" firstAttribute="centerX" secondItem="M8E-hE-eoH" secondAttribute="centerX" id="NbA-X3-XDO"/>
+                                    <constraint firstItem="eSy-dY-3SX" firstAttribute="top" secondItem="xwH-tK-oYI" secondAttribute="bottom" constant="30" id="O3r-jv-Qs0"/>
+                                    <constraint firstItem="pea-yi-FT2" firstAttribute="top" secondItem="xwH-tK-oYI" secondAttribute="top" constant="5" id="SZb-4P-5Bh"/>
+                                    <constraint firstItem="eSy-dY-3SX" firstAttribute="centerX" secondItem="M8E-hE-eoH" secondAttribute="centerX" id="Vto-Yr-RHF"/>
+                                    <constraint firstItem="pea-yi-FT2" firstAttribute="leading" secondItem="xwH-tK-oYI" secondAttribute="leading" constant="5" id="WaL-HX-Z2V"/>
+                                    <constraint firstItem="xwH-tK-oYI" firstAttribute="top" secondItem="BO6-Gx-oRa" secondAttribute="bottom" constant="13" id="egs-40-hbR"/>
+                                    <constraint firstItem="huW-Io-enF" firstAttribute="width" secondItem="EUO-eR-fhD" secondAttribute="width" id="iWw-gp-WqQ"/>
+                                    <constraint firstItem="xwH-tK-oYI" firstAttribute="top" secondItem="M8E-hE-eoH" secondAttribute="top" constant="40" id="mIs-po-0Fy"/>
+                                    <constraint firstItem="xwH-tK-oYI" firstAttribute="centerX" secondItem="M8E-hE-eoH" secondAttribute="centerX" id="oPG-4M-YZW"/>
+                                    <constraint firstItem="huW-Io-enF" firstAttribute="height" secondItem="EUO-eR-fhD" secondAttribute="height" id="qRx-Tg-6q3"/>
+                                    <constraint firstItem="EUO-eR-fhD" firstAttribute="top" secondItem="M8E-hE-eoH" secondAttribute="top" constant="16" id="t36-Kb-u04"/>
+                                    <constraint firstItem="xwH-tK-oYI" firstAttribute="top" secondItem="EUO-eR-fhD" secondAttribute="bottom" constant="23" id="t4p-Qc-hOY"/>
+                                    <constraint firstItem="EUO-eR-fhD" firstAttribute="leading" secondItem="M8E-hE-eoH" secondAttribute="leading" id="tuF-TC-0fz"/>
+                                    <constraint firstAttribute="trailing" secondItem="huW-Io-enF" secondAttribute="trailing" id="xkW-dG-MK2"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplicación de reto para Intercorp Retail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0q-m1-1iN">
+                                <rect key="frame" x="12" y="449" width="296" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="2bf-m1-78M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-100" family="Museo Sans" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.25098039215686274" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="M8E-hE-eoH" firstAttribute="leading" secondItem="bQb-Br-5Uh" secondAttribute="leading" id="0Db-i3-rmc"/>
+                            <constraint firstItem="QGF-Od-ouc" firstAttribute="leading" secondItem="bQb-Br-5Uh" secondAttribute="leading" constant="16" id="0gR-dB-e3I"/>
+                            <constraint firstItem="QGF-Od-ouc" firstAttribute="top" secondItem="bQb-Br-5Uh" secondAttribute="top" constant="30" id="1xl-rE-DUH"/>
+                            <constraint firstItem="bQb-Br-5Uh" firstAttribute="trailing" secondItem="vk2-FG-3ba" secondAttribute="trailing" constant="64" id="B6f-dg-tjY"/>
+                            <constraint firstItem="b0q-m1-1iN" firstAttribute="leading" secondItem="bQb-Br-5Uh" secondAttribute="leading" constant="12" id="CEn-xF-SE1"/>
+                            <constraint firstItem="M8E-hE-eoH" firstAttribute="top" secondItem="QnX-o2-LYH" secondAttribute="bottom" id="Dak-Mh-Bta"/>
+                            <constraint firstItem="bQb-Br-5Uh" firstAttribute="bottom" secondItem="b0q-m1-1iN" secondAttribute="bottom" constant="10" id="QcW-jw-iFQ"/>
+                            <constraint firstItem="bQb-Br-5Uh" firstAttribute="trailing" secondItem="QnX-o2-LYH" secondAttribute="trailing" constant="64" id="RXi-y2-Fdl"/>
+                            <constraint firstItem="bQb-Br-5Uh" firstAttribute="trailing" secondItem="QGF-Od-ouc" secondAttribute="trailing" constant="16" id="dlX-65-qib"/>
+                            <constraint firstItem="QnX-o2-LYH" firstAttribute="top" secondItem="QGF-Od-ouc" secondAttribute="bottom" constant="60" id="kbA-9a-zqs"/>
+                            <constraint firstItem="M8E-hE-eoH" firstAttribute="trailing" secondItem="bQb-Br-5Uh" secondAttribute="trailing" id="lEA-YD-AQ0"/>
+                            <constraint firstItem="vk2-FG-3ba" firstAttribute="leading" secondItem="bQb-Br-5Uh" secondAttribute="leading" constant="64" id="pGy-d1-W2T"/>
+                            <constraint firstItem="bQb-Br-5Uh" firstAttribute="trailing" secondItem="b0q-m1-1iN" secondAttribute="trailing" constant="12" id="slG-j6-2QR"/>
+                            <constraint firstItem="vk2-FG-3ba" firstAttribute="top" secondItem="QnX-o2-LYH" secondAttribute="bottom" constant="28" id="snf-Zc-yXG"/>
+                            <constraint firstItem="QnX-o2-LYH" firstAttribute="leading" secondItem="bQb-Br-5Uh" secondAttribute="leading" constant="64" id="tGT-1p-Gje"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bQb-Br-5Uh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LGc-ly-NtZ"/>
+                    <connections>
+                        <outlet property="containerNumberLoginView" destination="M8E-hE-eoH" id="L3y-BL-1z4"/>
+                        <outlet property="facebookButton" destination="QnX-o2-LYH" id="hjS-sW-y1g"/>
+                        <outlet property="fbButtonTopLabelBottomContraint" destination="kbA-9a-zqs" id="Dxt-dm-y8y"/>
+                        <outlet property="phoneNumberButton" destination="vk2-FG-3ba" id="EKV-Nv-Ze7"/>
+                        <outlet property="phoneNumberTextField" destination="xwH-tK-oYI" id="HDL-PS-6CG"/>
+                        <segue destination="e7T-Om-zWJ" kind="show" identifier="segueVerifyCode" id="woO-25-IQ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vHq-7B-3v2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271.875" y="-2.5"/>
+        </scene>
+        <!--Phone Code View Controller-->
+        <scene sceneID="qqi-db-NSC">
+            <objects>
+                <viewController storyboardIdentifier="PhoneCodeViewController" id="e7T-Om-zWJ" customClass="PhoneCodeViewController" customModule="talento_tech_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="36n-FE-ByW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresar el código de verificación" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbX-St-Wfm">
+                                <rect key="frame" x="16" y="106" width="288" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="hLh-w0-fFE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-300" family="Museo Sans" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.53725490200000003" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="código" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EM5-zf-Ddh">
+                                <rect key="frame" x="49" y="159" width="222" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="P0b-df-9q2"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-300" family="Museo Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="one-time-code"/>
+                                <connections>
+                                    <outlet property="delegate" destination="e7T-Om-zWJ" id="KYY-x4-UPI"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-closure" translatesAutoresizingMaskIntoConstraints="NO" id="Xem-CS-vJP">
+                                <rect key="frame" x="57" y="164" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="oBE-AC-wiR"/>
+                                    <constraint firstAttribute="height" constant="20" id="wvP-Gl-6Ne"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplicación de reto para Intercorp Retail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sA-fB-HcD">
+                                <rect key="frame" x="12" y="449" width="296" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="WN7-h0-cdH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-100" family="Museo Sans" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.25098039215686274" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6hw-Ej-qYq" firstAttribute="trailing" secondItem="EM5-zf-Ddh" secondAttribute="trailing" constant="49" id="7PZ-bf-mYY"/>
+                            <constraint firstItem="6hw-Ej-qYq" firstAttribute="trailing" secondItem="2sA-fB-HcD" secondAttribute="trailing" constant="12" id="DLN-e9-aK8"/>
+                            <constraint firstItem="CbX-St-Wfm" firstAttribute="leading" secondItem="6hw-Ej-qYq" secondAttribute="leading" constant="16" id="Erc-e1-L96"/>
+                            <constraint firstItem="Xem-CS-vJP" firstAttribute="top" secondItem="EM5-zf-Ddh" secondAttribute="top" constant="5" id="R0m-X8-alz"/>
+                            <constraint firstItem="Xem-CS-vJP" firstAttribute="leading" secondItem="EM5-zf-Ddh" secondAttribute="leading" constant="8" id="VJE-vw-XGS"/>
+                            <constraint firstItem="2sA-fB-HcD" firstAttribute="leading" secondItem="6hw-Ej-qYq" secondAttribute="leading" constant="12" id="axO-Sf-ptA"/>
+                            <constraint firstItem="CbX-St-Wfm" firstAttribute="top" secondItem="6hw-Ej-qYq" secondAttribute="top" constant="42" id="bSl-Yd-t2w"/>
+                            <constraint firstItem="6hw-Ej-qYq" firstAttribute="bottom" secondItem="2sA-fB-HcD" secondAttribute="bottom" constant="10" id="p6N-Pg-xds"/>
+                            <constraint firstItem="EM5-zf-Ddh" firstAttribute="top" secondItem="CbX-St-Wfm" secondAttribute="bottom" constant="29" id="pnA-jq-nKv"/>
+                            <constraint firstItem="EM5-zf-Ddh" firstAttribute="leading" secondItem="6hw-Ej-qYq" secondAttribute="leading" constant="49" id="vaF-fS-ES5"/>
+                            <constraint firstItem="6hw-Ej-qYq" firstAttribute="trailing" secondItem="CbX-St-Wfm" secondAttribute="trailing" constant="16" id="zdp-9D-6tD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6hw-Ej-qYq"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtPhoneCode" destination="EM5-zf-Ddh" id="5pd-iV-48b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOg-Uc-PAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564.375" y="-3.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img-closure" width="20" height="20"/>
+        <image name="img-phone" width="20" height="20"/>
+    </resources>
+</document>

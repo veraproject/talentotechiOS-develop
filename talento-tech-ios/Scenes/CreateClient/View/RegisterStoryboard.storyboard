@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoSans-500.otf">
+            <string>MuseoSans-500</string>
+        </array>
+        <array key="MuseoSans-700.otf">
+            <string>MuseoSans-700</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="uPM-04-uRw">
+            <objects>
+                <navigationController id="3nn-lo-nfW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LeR-hy-Izo">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ANQ-3X-Yig" kind="relationship" relationship="rootViewController" id="mez-uR-B8c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVi-Yf-Gpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2121" y="-9"/>
+        </scene>
+        <!--Register Client View Controller-->
+        <scene sceneID="qaw-bo-GGh">
+            <objects>
+                <viewController storyboardIdentifier="RegisterClientViewController" id="ANQ-3X-Yig" customClass="RegisterClientViewController" customModule="talento_tech_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ud1-NX-FDj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsE-yX-f5x">
+                                <rect key="frame" x="0.0" y="420" width="320" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHB-vb-gs0" customClass="CustomButton" customModule="talento_tech_ios" customModuleProvider="target">
+                                        <rect key="frame" x="33" y="15" width="254" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.53725490196078429" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                        <state key="normal" title="Confirmar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="regiterClientTapped:" destination="ANQ-3X-Yig" eventType="touchUpInside" id="Bpy-dG-OJ8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.23529411764705882" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="RHB-vb-gs0" firstAttribute="centerX" secondItem="RsE-yX-f5x" secondAttribute="centerX" id="3SJ-hb-Sbf"/>
+                                    <constraint firstItem="RHB-vb-gs0" firstAttribute="centerY" secondItem="RsE-yX-f5x" secondAttribute="centerY" id="Kna-9H-PrL"/>
+                                    <constraint firstItem="RHB-vb-gs0" firstAttribute="leading" secondItem="RsE-yX-f5x" secondAttribute="leading" constant="33" id="MmW-U0-04w"/>
+                                    <constraint firstAttribute="height" constant="60" id="UnF-L1-S5g"/>
+                                    <constraint firstItem="RHB-vb-gs0" firstAttribute="top" secondItem="RsE-yX-f5x" secondAttribute="top" constant="15" id="dRO-6K-IGG"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kh1-wc-Y8p">
+                                <rect key="frame" x="0.0" y="64" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos de cliente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HB-b2-XuQ">
+                                        <rect key="frame" x="14" y="14" width="292" height="22"/>
+                                        <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.23529411764705882" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="0HB-b2-XuQ" firstAttribute="leading" secondItem="Kh1-wc-Y8p" secondAttribute="leading" constant="14" id="1br-aI-rEh"/>
+                                    <constraint firstItem="0HB-b2-XuQ" firstAttribute="top" secondItem="Kh1-wc-Y8p" secondAttribute="top" constant="14" id="ABW-VV-mYH"/>
+                                    <constraint firstItem="0HB-b2-XuQ" firstAttribute="centerX" secondItem="Kh1-wc-Y8p" secondAttribute="centerX" id="L8H-SY-yZs"/>
+                                    <constraint firstItem="0HB-b2-XuQ" firstAttribute="centerY" secondItem="Kh1-wc-Y8p" secondAttribute="centerY" id="e56-sY-s0U"/>
+                                    <constraint firstAttribute="height" constant="50" id="rKf-VI-q33"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edad:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kR8-cZ-pjS">
+                                <rect key="frame" x="25" y="244.5" width="93" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="HLV-b5-pag"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.53725490196078429" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EqX-6B-y4R">
+                                <rect key="frame" x="119" y="236" width="176" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ANQ-3X-Yig" id="Den-FH-PPH"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombres:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzC-90-7kF">
+                                <rect key="frame" x="25" y="144.5" width="93" height="14"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.53725490196078429" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eO9-LY-q0s">
+                                <rect key="frame" x="119" y="136" width="176" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gO0-LM-Z8N"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ANQ-3X-Yig" id="vhe-HO-i6t"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apellidos:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9c-Ph-80f">
+                                <rect key="frame" x="25" y="194" width="93" height="14"/>
+                                <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.53725490196078429" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fwy-gK-7md">
+                                <rect key="frame" x="119" y="186" width="176" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4i2-fb-iwi"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ANQ-3X-Yig" id="pjl-lE-ak1"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de nacimiento:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTo-8z-O6u">
+                                <rect key="frame" x="25" y="286.5" width="93" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="d3R-c9-cKX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-700" family="Museo Sans" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.53725490196078429" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EPf-jm-OQb">
+                                <rect key="frame" x="119" y="286" width="176" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y13-vq-qgK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ANQ-3X-Yig" id="ud8-cl-6JE"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eO9-LY-q0s" firstAttribute="trailing" secondItem="Fwy-gK-7md" secondAttribute="trailing" id="1OV-C6-RVa"/>
+                            <constraint firstItem="dTo-8z-O6u" firstAttribute="centerY" secondItem="EPf-jm-OQb" secondAttribute="centerY" id="1Xl-kV-KkX"/>
+                            <constraint firstItem="q9c-Ph-80f" firstAttribute="centerX" secondItem="kR8-cZ-pjS" secondAttribute="centerX" id="5Tj-SS-qWM"/>
+                            <constraint firstItem="EqX-6B-y4R" firstAttribute="leading" secondItem="kR8-cZ-pjS" secondAttribute="trailing" constant="1" id="8j0-hw-3cv"/>
+                            <constraint firstItem="Fwy-gK-7md" firstAttribute="baseline" secondItem="q9c-Ph-80f" secondAttribute="firstBaseline" id="EHZ-G5-caZ"/>
+                            <constraint firstItem="EqX-6B-y4R" firstAttribute="top" secondItem="Fwy-gK-7md" secondAttribute="bottom" constant="20" id="F5q-xH-hEM"/>
+                            <constraint firstItem="CzC-90-7kF" firstAttribute="baseline" secondItem="eO9-LY-q0s" secondAttribute="baseline" id="KH1-JG-0mJ"/>
+                            <constraint firstItem="eO9-LY-q0s" firstAttribute="top" secondItem="Kh1-wc-Y8p" secondAttribute="bottom" constant="22" id="Pb7-tY-Sh4"/>
+                            <constraint firstItem="q9c-Ph-80f" firstAttribute="leading" secondItem="CzC-90-7kF" secondAttribute="leading" id="QsL-Ie-uuH"/>
+                            <constraint firstItem="OpQ-Ek-S4D" firstAttribute="trailing" secondItem="eO9-LY-q0s" secondAttribute="trailing" constant="25" id="Ss1-Cv-vPP"/>
+                            <constraint firstItem="CzC-90-7kF" firstAttribute="trailing" secondItem="q9c-Ph-80f" secondAttribute="trailing" id="WZe-2f-hAO"/>
+                            <constraint firstItem="EqX-6B-y4R" firstAttribute="trailing" secondItem="EPf-jm-OQb" secondAttribute="trailing" id="ZKS-0L-NhA"/>
+                            <constraint firstItem="EPf-jm-OQb" firstAttribute="top" secondItem="EqX-6B-y4R" secondAttribute="bottom" constant="20" id="b5Y-F1-QgL"/>
+                            <constraint firstItem="eO9-LY-q0s" firstAttribute="leading" secondItem="Fwy-gK-7md" secondAttribute="leading" id="cTO-7h-vwF"/>
+                            <constraint firstItem="Kh1-wc-Y8p" firstAttribute="trailing" secondItem="OpQ-Ek-S4D" secondAttribute="trailing" id="d7t-Ma-Zge"/>
+                            <constraint firstItem="Fwy-gK-7md" firstAttribute="trailing" secondItem="EqX-6B-y4R" secondAttribute="trailing" id="eT1-IM-NHo"/>
+                            <constraint firstItem="EqX-6B-y4R" firstAttribute="baseline" secondItem="kR8-cZ-pjS" secondAttribute="baseline" id="hXe-GV-79I"/>
+                            <constraint firstItem="Kh1-wc-Y8p" firstAttribute="top" secondItem="OpQ-Ek-S4D" secondAttribute="top" id="jNL-GF-ApB"/>
+                            <constraint firstItem="RsE-yX-f5x" firstAttribute="trailing" secondItem="OpQ-Ek-S4D" secondAttribute="trailing" id="jQm-Oq-QCK"/>
+                            <constraint firstItem="CzC-90-7kF" firstAttribute="leading" secondItem="dTo-8z-O6u" secondAttribute="leading" id="kSF-eV-g2W"/>
+                            <constraint firstItem="q9c-Ph-80f" firstAttribute="leading" secondItem="OpQ-Ek-S4D" secondAttribute="leading" constant="25" id="lQR-kC-Tfr"/>
+                            <constraint firstItem="Fwy-gK-7md" firstAttribute="top" secondItem="eO9-LY-q0s" secondAttribute="bottom" constant="20" id="nvT-1Q-alh"/>
+                            <constraint firstItem="RsE-yX-f5x" firstAttribute="bottom" secondItem="OpQ-Ek-S4D" secondAttribute="bottom" id="qiG-Xd-WQJ"/>
+                            <constraint firstItem="Fwy-gK-7md" firstAttribute="leading" secondItem="EqX-6B-y4R" secondAttribute="leading" id="r0z-3E-3cb"/>
+                            <constraint firstItem="EqX-6B-y4R" firstAttribute="leading" secondItem="EPf-jm-OQb" secondAttribute="leading" id="rbo-sd-hsl"/>
+                            <constraint firstItem="Kh1-wc-Y8p" firstAttribute="leading" secondItem="OpQ-Ek-S4D" secondAttribute="leading" id="t6I-I3-QVa"/>
+                            <constraint firstItem="q9c-Ph-80f" firstAttribute="leading" secondItem="kR8-cZ-pjS" secondAttribute="leading" id="wTG-wc-KDZ"/>
+                            <constraint firstItem="RsE-yX-f5x" firstAttribute="leading" secondItem="OpQ-Ek-S4D" secondAttribute="leading" id="yce-hG-l6z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OpQ-Ek-S4D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eSR-c0-GiK"/>
+                    <connections>
+                        <outlet property="ageTextField" destination="EqX-6B-y4R" id="K1x-UV-aR4"/>
+                        <outlet property="dateYearTextField" destination="EPf-jm-OQb" id="KaL-2l-CQs"/>
+                        <outlet property="lastNameTextField" destination="Fwy-gK-7md" id="n0h-fX-dux"/>
+                        <outlet property="nameTextField" destination="eO9-LY-q0s" id="3IE-FR-uPb"/>
+                        <segue destination="9nf-MR-BQa" kind="show" identifier="confirmRegisterClientSegue" id="a6D-dP-llS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQF-Bq-3fR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1155" y="-23.75"/>
+        </scene>
+        <!--Confirm Register View Controller-->
+        <scene sceneID="Nja-Yy-L52">
+            <objects>
+                <viewController id="9nf-MR-BQa" customClass="ConfirmRegisterViewController" customModule="talento_tech_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Qh-id-KNf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Felicitaciones creación exitosa!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2P-xE-45L">
+                                <rect key="frame" x="42" y="100" width="236" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sKT-ii-JEl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.53725490196078429" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ya puedes listar los datos del usuario creado o volver agregar otro." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0l-9B-dy6">
+                                <rect key="frame" x="30" y="230" width="260" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Z2B-3A-doR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.53725490196078429" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpw-Wp-miV" customClass="CustomButton" customModule="talento_tech_ios" customModuleProvider="target">
+                                <rect key="frame" x="70" y="333" width="180" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.53725490196078429" blue="0.58431372549019611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Csv-w1-lem"/>
+                                    <constraint firstAttribute="width" constant="180" id="Wk1-Tn-FMD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="14"/>
+                                <state key="normal" title="Regresar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="enterHomeAction:" destination="9nf-MR-BQa" eventType="touchUpInside" id="j9Z-k2-LPw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gpw-Wp-miV" firstAttribute="top" secondItem="D0l-9B-dy6" secondAttribute="bottom" constant="43" id="072-W5-ssH"/>
+                            <constraint firstItem="sWu-57-Hop" firstAttribute="trailing" secondItem="D0l-9B-dy6" secondAttribute="trailing" constant="30" id="28h-FZ-d7R"/>
+                            <constraint firstItem="K2P-xE-45L" firstAttribute="leading" secondItem="sWu-57-Hop" secondAttribute="leading" constant="42" id="6Rr-Xu-UgJ"/>
+                            <constraint firstItem="D0l-9B-dy6" firstAttribute="centerX" secondItem="1Qh-id-KNf" secondAttribute="centerX" id="7FP-F2-bXP"/>
+                            <constraint firstItem="K2P-xE-45L" firstAttribute="top" secondItem="sWu-57-Hop" secondAttribute="top" constant="80" id="FiK-MM-RTi"/>
+                            <constraint firstItem="gpw-Wp-miV" firstAttribute="leading" secondItem="sWu-57-Hop" secondAttribute="leading" constant="70" id="RZs-XP-u3s"/>
+                            <constraint firstItem="D0l-9B-dy6" firstAttribute="top" secondItem="K2P-xE-45L" secondAttribute="bottom" constant="100" id="dgo-bR-sjO"/>
+                            <constraint firstItem="sWu-57-Hop" firstAttribute="trailing" secondItem="K2P-xE-45L" secondAttribute="trailing" constant="42" id="fuW-mi-EYc"/>
+                            <constraint firstItem="K2P-xE-45L" firstAttribute="centerX" secondItem="1Qh-id-KNf" secondAttribute="centerX" id="fvr-YD-ZSJ"/>
+                            <constraint firstItem="D0l-9B-dy6" firstAttribute="leading" secondItem="sWu-57-Hop" secondAttribute="leading" constant="30" id="jbw-yd-8Id"/>
+                            <constraint firstItem="sWu-57-Hop" firstAttribute="trailing" secondItem="gpw-Wp-miV" secondAttribute="trailing" constant="70" id="wZn-ht-oEn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sWu-57-Hop"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GML-YU-Clm"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVQ-A8-tJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362" y="-34"/>
+        </scene>
+    </scenes>
+</document>

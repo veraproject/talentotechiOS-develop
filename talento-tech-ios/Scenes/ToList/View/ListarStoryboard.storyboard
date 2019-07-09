@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MuseoSans-500.otf">
+            <string>MuseoSans-500</string>
+        </array>
+        <array key="cocogoose.otf">
+            <string>COCOGOOSE</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="D8d-R8-MrX">
+            <objects>
+                <navigationController id="Y4q-bp-JxQ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zk5-0a-8R2">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eeN-o9-3jg" kind="relationship" relationship="rootViewController" id="CYs-ax-o0U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJa-0a-OSh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-328" y="636"/>
+        </scene>
+        <!--List Client View Controller-->
+        <scene sceneID="cea-Ck-p6r">
+            <objects>
+                <viewController storyboardIdentifier="ListClientViewController" id="eeN-o9-3jg" customClass="ListClientViewController" customModule="talento_tech_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSa-dg-3P7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No se encuentran clientes registrados" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4R-oc-96b">
+                                <rect key="frame" x="29" y="220" width="262.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="A0j-Rn-XmO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N3K-G3-fXe">
+                                <rect key="frame" x="0.0" y="124" width="320" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8fF-ad-sT9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="eeN-o9-3jg" id="cn4-AP-mZu"/>
+                                    <outlet property="delegate" destination="eeN-o9-3jg" id="ssr-Eu-Jjc"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POh-HD-WuX">
+                                <rect key="frame" x="0.0" y="64" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de clientes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dH1-fB-DZs">
+                                        <rect key="frame" x="14" y="14" width="292" height="22"/>
+                                        <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18823529410000001" green="0.25098039220000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dH1-fB-DZs" firstAttribute="centerX" secondItem="POh-HD-WuX" secondAttribute="centerX" id="JtP-ES-TRM"/>
+                                    <constraint firstItem="dH1-fB-DZs" firstAttribute="leading" secondItem="POh-HD-WuX" secondAttribute="leading" constant="14" id="glx-4Y-7S4"/>
+                                    <constraint firstAttribute="height" constant="50" id="qeF-kQ-kMf"/>
+                                    <constraint firstItem="dH1-fB-DZs" firstAttribute="top" secondItem="POh-HD-WuX" secondAttribute="top" constant="14" id="sEy-cJ-ndO"/>
+                                    <constraint firstItem="dH1-fB-DZs" firstAttribute="centerY" secondItem="POh-HD-WuX" secondAttribute="centerY" id="tF3-SS-ImR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.25098039215686274" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="N3K-G3-fXe" firstAttribute="top" secondItem="MIe-Xw-7ry" secondAttribute="top" constant="60" id="28r-oT-phB"/>
+                            <constraint firstItem="POh-HD-WuX" firstAttribute="leading" secondItem="MIe-Xw-7ry" secondAttribute="leading" id="9fa-8Y-Hko"/>
+                            <constraint firstItem="POh-HD-WuX" firstAttribute="trailing" secondItem="MIe-Xw-7ry" secondAttribute="trailing" id="AhO-8Z-TsW"/>
+                            <constraint firstItem="W4R-oc-96b" firstAttribute="centerY" secondItem="aSa-dg-3P7" secondAttribute="centerY" id="HHN-f2-89s"/>
+                            <constraint firstItem="W4R-oc-96b" firstAttribute="centerX" secondItem="aSa-dg-3P7" secondAttribute="centerX" id="OkA-lo-IF4"/>
+                            <constraint firstItem="N3K-G3-fXe" firstAttribute="trailing" secondItem="MIe-Xw-7ry" secondAttribute="trailing" id="aKT-YQ-b9z"/>
+                            <constraint firstItem="N3K-G3-fXe" firstAttribute="leading" secondItem="MIe-Xw-7ry" secondAttribute="leading" id="f6E-m4-OgS"/>
+                            <constraint firstItem="POh-HD-WuX" firstAttribute="top" secondItem="MIe-Xw-7ry" secondAttribute="top" id="w1O-t9-ugh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MIe-Xw-7ry"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ljo-ph-SpB"/>
+                    <connections>
+                        <outlet property="clientsTableView" destination="N3K-G3-fXe" id="PjK-xj-g84"/>
+                        <outlet property="heightConstraint" destination="8fF-ad-sT9" id="qv2-C6-wrP"/>
+                        <outlet property="messageLabel" destination="W4R-oc-96b" id="vyY-Cw-q6E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CT9-dv-GE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545.625" y="655"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="cocogoose.otf">
+            <string>COCOGOOSE</string>
+        </array>
+        <array key="museo.otf">
+            <string>MuseoSans-500</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Hfm-Qa-29D">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="UJT-4f-S0p" customClass="HomeViewController" customModule="talento_tech_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YbP-8g-Ayt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mbn-Un-E9v">
+                                <rect key="frame" x="0.0" y="64" width="320" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menú principal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX1-an-LCt">
+                                        <rect key="frame" x="14" y="14" width="292" height="22"/>
+                                        <fontDescription key="fontDescription" name="COCOGOOSE" family="COCOGOOSE" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18823529411764706" green="0.25098039215686274" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qX1-an-LCt" firstAttribute="centerY" secondItem="Mbn-Un-E9v" secondAttribute="centerY" id="HXu-gy-ast"/>
+                                    <constraint firstItem="qX1-an-LCt" firstAttribute="leading" secondItem="Mbn-Un-E9v" secondAttribute="leading" constant="14" id="Tkj-r8-qmI"/>
+                                    <constraint firstItem="qX1-an-LCt" firstAttribute="top" secondItem="Mbn-Un-E9v" secondAttribute="top" constant="14" id="ha8-Xq-SBn"/>
+                                    <constraint firstAttribute="height" constant="50" id="n4f-iP-l7G"/>
+                                    <constraint firstItem="qX1-an-LCt" firstAttribute="centerX" secondItem="Mbn-Un-E9v" secondAttribute="centerX" id="rCC-Pj-vGd"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bs-WH-J09" customClass="CustomButton" customModule="talento_tech_ios" customModuleProvider="target">
+                                <rect key="frame" x="122" y="122" width="76" height="76"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4Bs-WH-J09" secondAttribute="height" multiplier="1:1" id="X0f-x2-24i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="10"/>
+                                <state key="normal" title="Crear cliente" backgroundImage="img-client"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createUserTapped:" destination="UJT-4f-S0p" eventType="touchUpInside" id="N6Y-mF-Nx7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dw1-Rq-tcd" customClass="CustomButton" customModule="talento_tech_ios" customModuleProvider="target">
+                                <rect key="frame" x="122" y="362" width="76" height="76"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dw1-Rq-tcd" secondAttribute="height" multiplier="1:1" id="6Ql-0D-20D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="10"/>
+                                <state key="normal" title="Salir" backgroundImage="img-closesession">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeSessionTapped:" destination="UJT-4f-S0p" eventType="touchUpInside" id="jEq-7m-5dC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-KA-nMj" customClass="CustomButton" customModule="talento_tech_ios" customModuleProvider="target">
+                                <rect key="frame" x="122" y="240" width="76" height="76"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4gh-KA-nMj" secondAttribute="height" multiplier="1:1" id="jBw-hL-tFq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MuseoSans-500" family="Museo Sans" pointSize="10"/>
+                                <state key="normal" title="Clientes" backgroundImage="img-list">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="listClientsTapped:" destination="UJT-4f-S0p" eventType="touchUpInside" id="OBi-dJ-yoj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.25098039215686274" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4gh-KA-nMj" firstAttribute="leading" secondItem="dw1-Rq-tcd" secondAttribute="leading" id="2Ub-oc-zm2"/>
+                            <constraint firstItem="Mbn-Un-E9v" firstAttribute="leading" secondItem="TUP-d7-XYs" secondAttribute="leading" id="59f-Oo-W4L"/>
+                            <constraint firstItem="4Bs-WH-J09" firstAttribute="leading" secondItem="4gh-KA-nMj" secondAttribute="leading" id="948-Yg-Gdn"/>
+                            <constraint firstItem="4gh-KA-nMj" firstAttribute="centerX" secondItem="4Bs-WH-J09" secondAttribute="centerX" id="Bch-dd-SJZ"/>
+                            <constraint firstItem="TUP-d7-XYs" firstAttribute="bottom" secondItem="dw1-Rq-tcd" secondAttribute="bottom" constant="42" id="EE5-oL-h9K"/>
+                            <constraint firstItem="4gh-KA-nMj" firstAttribute="top" secondItem="4Bs-WH-J09" secondAttribute="bottom" constant="42" id="FFw-ec-ztU"/>
+                            <constraint firstItem="Mbn-Un-E9v" firstAttribute="trailing" secondItem="TUP-d7-XYs" secondAttribute="trailing" id="I2q-xm-JgY"/>
+                            <constraint firstItem="4Bs-WH-J09" firstAttribute="top" secondItem="Mbn-Un-E9v" secondAttribute="bottom" constant="8" symbolic="YES" id="LlC-Ep-gKX"/>
+                            <constraint firstItem="4Bs-WH-J09" firstAttribute="centerX" secondItem="Mbn-Un-E9v" secondAttribute="centerX" id="WAt-ju-Cr3"/>
+                            <constraint firstItem="dw1-Rq-tcd" firstAttribute="centerX" secondItem="4Bs-WH-J09" secondAttribute="centerX" id="cbT-BX-Z56"/>
+                            <constraint firstItem="dw1-Rq-tcd" firstAttribute="top" secondItem="4gh-KA-nMj" secondAttribute="bottom" constant="46" id="sG7-PD-9Ww"/>
+                            <constraint firstItem="Mbn-Un-E9v" firstAttribute="top" secondItem="TUP-d7-XYs" secondAttribute="top" id="wvM-nr-Axn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TUP-d7-XYs"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdI-F9-rVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.25" y="151.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img-client" width="120" height="120"/>
+        <image name="img-closesession" width="120" height="120"/>
+        <image name="img-list" width="120" height="120"/>
+    </resources>
+</document>
